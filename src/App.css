@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b2434;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-container{
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+
+.movie {
+    width: 210px;
+    height: 360px;
+    margin: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid whitesmoke
   }
+  
+  .movie img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .movie div.movie-details{
+    z-index: 2;
+    background-color: #343739;
+    padding: 16px 24px 24px 24px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .movie span {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #f0f0f0;
+  }
+  
+  .movie h3 {
+    margin-top: 5px;
+    color: #f9d3b4;
+  }
+
+  input{
+    width: 160px;
+    padding: 3px 5px;
+    
+  }
+  button{
+    padding: 3px 8px;
+    background: darkblue;
+    color: white;
+    outline: none;
+  }
+  h1{
+    margin: 10px;
+    letter-spacing: 4px;
+    color: white;
+  }
+.empty{
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 2rem;
 }
