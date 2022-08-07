@@ -5,5 +5,5 @@ For Demo [click here](itsmovieworld.netlify.app)
 ## Screenshot
 
 <div align="center">
-<img src="./screenshots/screenshot.png"/>
+<img src="./screenshots/Screenshot.png"/>
 </div>
