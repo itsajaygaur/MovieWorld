@@ -1,6 +1,6 @@
 ## MovieWorld
 
-For Demo [click here](itsmovieworld.netlify.app)
+For Demo [click here](https://itsmovieworld.netlify.app/)
 
 ## Screenshot
 
