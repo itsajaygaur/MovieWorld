@@ -5,7 +5,7 @@ import './App.css'
 const App = () => {
     const [movies, setMovies] = React.useState([])
     const [searchTerm, setSearchTerm] = React.useState('')
-    const API_URL = 'http://www.omdbapi.com/?apikey=56aad638'
+    const API_URL = 'https://www.omdbapi.com/?apikey=56aad638'
 
     const getMovies = async (title) => {
         const res = await fetch(`${API_URL}&s=${title}`)
