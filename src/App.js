@@ -1,44 +1,19 @@
 import React from 'react'
-import Moviecard from './Moviecard.js'
 import './App.css'
+import Movies from './components/Movies'
+import Movie from './components/Movie'
+import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
-    const [movies, setMovies] = React.useState([])
-    const [searchTerm, setSearchTerm] = React.useState('')
-    const API_URL = 'https://www.omdbapi.com/?apikey=56aad638'
 
-    const getMovies = async (title) => {
-        const res = await fetch(`${API_URL}&s=${title}`)
-        const data = await res.json()
-        setMovies(data.Search)
-        // console.log(data)
-    }
-
-    React.useEffect(() => {
-        getMovies('batman')
-    }, [])
     return (
         <div className='app'>
-            <div>
-                <h1>MovieWorld</h1>
-                <h2> hello there </h2>
-            </div>
-            <div>
-                <input type='text' placeholder='search movies' onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm} />
-                <button onClick={() => getMovies(searchTerm)}>search</button>
-            </div>
-            {
-                movies?.length > 0 ? (
-                    <div className='card-container'>
-                        {movies.map(movie => (
-                            <Moviecard key={movie.imdbID} movie={movie} />
-                        ))}
-                    </div>
-                ) : (
-                    <h3 className='empty'>No movies found</h3>
-                )
-            }
+            
 
+            <Routes>
+            <Route path="/" element={<Movies />} />
+            <Route path='/:id' element={<Movie />} />
+        </Routes>
         </div>
     )
 }
